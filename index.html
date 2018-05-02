@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Stegano Web</title>
+    <link href="stylesheet.css" rel=stylesheet type="text/css">
+</head>
+<body>
+    <script src="ClientSide.js"></script>
+    <h1 id="title">SteganoWeb</h1>
+    
+    <div class="outer-container">
+        <div class="container">
+        <div id="step1" class="section ">
+            <h1 id="title">Encode</h1>
+            <h2>Input Ballast</h2>
+            <input name="file" id="ballast-fileinput" type="file">
+            <input type='submit' id='btnLoad' value='Load' onclick='uploadBallast();'>
+
+            <h3>Supported file types : wav, png, jpg, ,bmp</h3>
+            <h3>Ballast Size : <span id="ballast-size"></span></h3>
+            <h3>Maximum allowed secret size : <span id="allowed-size"></span></h3>
+        </div>
+        <div id="step2" class="section collapsed">
+            <h2>Input Secret</h2>
+            <input name="file" id="secret-fileinput" type="file">
+            <input type='submit' onclick='uploadSecret();'>
+            
+            
+            <h3>Secret Size : <span id="secret-size"></span></h3>
+            <h3> Note: File extensions are not encoded as of yet, please remember the secret's extension</h3>
+        </div>
+        <div id="step3" class="section collapsed">
+            <h2>Encode Secret</h2>
+            <h3>When successful, a download link would appear</h3>
+            <input type='submit' value="Encode" onclick='encode();'>
+            <a href="http://localhost:8080/download_encoded" class="hidden" id="encode_download_link"> DOWNLOAD </a>
+        </div>
+
+        </div>
+        
+        <div id="step4">
+            <h1 id="title">Decode</h1>
+            <h2>Decode Secret</h2>
+            <h3>When successful, a download link would appear</h3>
+            <input name="file" id="decode-fileinput" type="file">
+            <input type='submit' value="Decode" onclick='uploadEncoded();'>
+            <a href="http://localhost:8080/download_decoded" class="hidden" id="decode_download_link"> DOWNLOAD </a>
+            <h3> Note: After downloading, change the extension of the secret to the one you remember from before.</h3>
+        </div>
+    </div>
+    
+</body>
+</html>

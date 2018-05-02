@@ -1,0 +1,48 @@
+body{
+    background: #222;
+    color: white;
+}
+
+a.button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+    text-decoration: none;
+    color: initial;
+}
+
+#step4{
+    flex-grow: 1;
+    flex-basis: 0;
+}
+
+#title{
+    text-align: center;
+}
+.container {
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    height:700px; 
+    flex-grow: 1;
+    flex-basis: 0;
+}
+
+.outer-container{
+    display: flex;
+    align-content: space-around;
+}
+.section {
+    overflow:hidden;
+    transition:flex 0.3s ease-out; 
+    height:auto;
+    flex:1;
+}
+.collapsed {
+    flex: 0;
+}
+
+.hidden{
+    visibility: hidden;
+}
