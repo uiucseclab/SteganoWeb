@@ -5,7 +5,7 @@ This application is built as a final project submission for UIUC CS 460 : Cyber 
 ## Demo
 A demo can be found at this address : http://165.227.49.237:8080/
 
-NOTE: This demo will be taken down at a later point and is being only served as a proof of concept for grading purposes.
+NOTE: Large file uploads take time, and the frontend doesn't give a clear indication of this upfront so the link might take a while to appear, please do not click the button again as it'd just delay the whole process. Also, this demo will be taken down at a later point and is being only served as a proof of concept for grading purposes.
 
 ## Motivation
 Images (PNG, JPG, BMP) and Audio (WAV) files are dense information formats which use significant precision to store their information. The precision is high enough such that even if the lower bits change, the apparent or audible change in the media would be indistiguishable from the orginal for the user. Using this idea, we can encode any secret file into a supported ballast file where the noise introduced by us would by 0.39% in case of WAV files and 0.78% change in case of images, which is hard for most humans to notice. We also encode some meta information during our encoding process such that we don't require the original file to decode our message, allowing for successful one time copies of our data.
